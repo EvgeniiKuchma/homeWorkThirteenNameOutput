@@ -11,8 +11,6 @@ namespace homeWorkThirteenNameOutput
     {
         static void Main(string[] args)
         {
-            int maxRangeString = 1;
-
             char simbol;
 
             string name;
@@ -23,21 +21,17 @@ namespace homeWorkThirteenNameOutput
             Console.Write("Enter the desired name: ");
             name = Console.ReadLine();
 
-            for (int i = 0; i <= name.Length + maxRangeString; i++)
+            string nameSimbol = $"{simbol}{name}{simbol}";
+            string simbolOutput = string.Empty;
+
+            for (int i = 0; i < nameSimbol.Length; i++)
             {
-                Console.Write(simbol);
-
-                if (i == name.Length + maxRangeString)
-                {
-                    Console.WriteLine($"\n{simbol}{name}{simbol}");
-
-                    for (int j = 0; j <= name.Length + maxRangeString; j++)
-                    {
-                        Console.Write(simbol);
-                    }
-                }
+                simbolOutput += simbol;
             }
-
+            
+            Console.WriteLine(simbolOutput);
+            Console.WriteLine(nameSimbol);
+            Console.WriteLine(simbolOutput);
             Console.WriteLine('\n');
         }
     }
